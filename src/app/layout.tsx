@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
 export const metadata: Metadata = {
   title: 'Конфигуратор товара | Next.js',
-  description: 'Пример интерактивного конфигуратора с динамической ценой на Next.js',
+  description: 'Пример интерактивного конфигуратора с динамической ценой',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

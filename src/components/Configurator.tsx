@@ -1,6 +1,5 @@
 'use client';
 import { useCart } from '@/context/CartContext';
-import { Check } from 'lucide-react';
 
 const colors = [
   { name: 'Серебристый', hex: '#C0C0C0' },
@@ -15,7 +14,6 @@ export default function Configurator() {
 
   return (
     <div className="grid md:grid-cols-2 gap-8">
-      {/* Превью товара — динамический прямоугольник */}
       <div className="bg-stone-100 rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
         <div
           className="w-full h-64 rounded-xl border-2 border-dashed flex items-center justify-center text-2xl font-light transition-all duration-300"
@@ -33,14 +31,12 @@ export default function Configurator() {
         </div>
       </div>
 
-      {/* Панель выбора опций */}
       <div className="space-y-8">
         <h2 className="text-3xl font-light">Сумка-трансформер</h2>
         <p className="text-stone-600">
           Выберите параметры, и товар изменится вместе с ценой.
         </p>
 
-        {/* Цвет */}
         <div>
           <h3 className="text-sm uppercase tracking-wide mb-3">Цвет</h3>
           <div className="flex gap-3">
@@ -56,14 +52,13 @@ export default function Configurator() {
                 style={{ backgroundColor: c.hex }}
               >
                 {item.color === c.name && (
-                  <Check className="text-white" size={16} />
+                  <span className="text-white text-sm">✓</span>
                 )}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Размер */}
         <div>
           <h3 className="text-sm uppercase tracking-wide mb-3">Размер</h3>
           <div className="flex gap-3">
@@ -83,7 +78,6 @@ export default function Configurator() {
           </div>
         </div>
 
-        {/* Материал */}
         <div>
           <h3 className="text-sm uppercase tracking-wide mb-3">Материал</h3>
           <div className="flex gap-3">
@@ -103,7 +97,6 @@ export default function Configurator() {
           </div>
         </div>
 
-        {/* Цена и кнопка */}
         <div className="flex items-center justify-between pt-4 border-t border-stone-200">
           <span className="text-2xl font-light">
             {item.price.toLocaleString()} ₽
